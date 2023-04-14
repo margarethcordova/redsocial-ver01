@@ -1,0 +1,558 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;600;700;800;900&display=swap');
+:root {
+      --color-background-dark: 17%;
+      --color-background-light: 90%;
+      --color-background-white: 100%;
+
+      --color-candidblue: #6cc3e0;
+      --color-forget-me-not: #816AA2;
+      --color-rhapsodylilac: #E5CEE8;
+      --color-plumblosoom: #BB84BD;
+      --color-danube: #2377a2;
+      --color-purple: #8958f1;
+      --color-lila: #b093f0;
+      --color-white: hsl(252, 30%, var(--color-background-white));;
+      
+      --color-light: hsl(252, 30%, var(--color-background-light));
+      --color-black: #020102;
+      --color-dark: #191919;
+      --color-gray: hsl(252, 30%, var(--color-background-dark));
+      --color-grey: #333333;
+
+      --tarjet-padding: 16px;
+      --tarjet-border-radius: 16px;
+      --searchbox-padding: 9.6px 16px;
+      --bton-padding: 9.6px 32px;
+      --border-radius: 32px;
+
+      --sticky-top-left: 5.4rem;
+      --sticky-top-right: -18rem;
+}
+
+*,
+*::before,
+*::after {
+      margin: 0;
+      padding: 0;
+      outline: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      list-style: none;
+      border: none;
+}
+
+* {
+      font-family: 'Poppins', sans-serif;
+}
+
+body {
+      color: var(--color-black);
+      background-color: var(--color-light);
+      overflow-x: hidden;
+}
+
+/* PRINCIPALES ESTILOS */
+
+.container {
+      width: 80%;
+      margin: 0 auto;
+}
+
+.photo-profile {
+      width: 50px;
+      border-radius: 50%;
+      overflow: hidden;
+}
+
+img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+}
+
+.bton {
+      display: inline-block;
+      padding: var(--bton-padding);
+      font-weight: 500;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      transition: all 300ms ease;
+      font-size: 15px;
+}
+
+.bton:hover {
+      opacity: 0.8;
+}
+
+.bton-initial {
+      background: var(--color-purple);
+      color: var(--color-white);
+}
+.logo{
+      font-size: 30px;
+      text-transform: capitalize;
+}
+.texto-primary{
+      font-weight: 600;
+      text-transform: capitalize;
+}
+.text-second {
+      color: var(--color-grey);
+}
+
+/* ESTILOS NAVBAR */
+nav {
+      width: 100%;
+      background-color: var(--color-white);
+      padding: 1rem 1rem;
+      position: sticky;
+      text-align: center;
+      align-items: center;
+      display: flex;
+      top: 0;
+      z-index: 10;
+      border-radius: 0 0 50px 50px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.329);
+}
+
+nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+}
+
+nav .public {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+}
+
+/*  -----------------  BOTON AYUDA ---------------------  */
+
+.bton-help {
+      background: rgb(255, 225, 143);
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+}
+
+.bton-help .border-help {
+      border: 1px rgb(255, 255, 255) solid;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+}
+
+.bton-help a {
+      color: var(--color-black);
+      font-weight: 700;
+}
+
+
+/* ---------------- MENU PRINCIPAL -------------------*/
+main {
+      position: relative;
+      margin-top: 10px;
+}
+
+main .container {
+      display: grid;
+      grid-template-columns: 18vw auto 20vw;
+      column-gap: 2rem;
+      position: relative;
+}
+
+
+
+
+/*---------------------BARRA DERECHA - AQUI LA FOTO DE ARRIBA----------------------*/
+
+main .container .contenedor-izquierda {
+      height: max-content;
+      position: sticky;
+}
+
+main .container .contenedor-izquierda .profile {
+      padding: var(--tarjet-padding);
+      background: var(--color-white);
+      border-radius: var(--tarjet-border-radius);
+      align-items: center;
+      line-height: 20px;
+      display: flex;
+      column-gap: 1rem;
+      width: 100%;
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+
+
+
+
+/*---------------------BARRA DERECHA----------------------*/
+.contenedor-izquierda .sidebar {
+      margin-top: 1rem;
+      background: var(--color-white);
+      border-radius: var(--tarjet-border-radius);
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.contenedor-izquierda .sidebar .menu-option {
+      display: flex;
+      align-items: center;
+      height: 4rem;
+      cursor: pointer;
+      transition: all 300ms ease;
+      position: relative;
+}
+
+.contenedor-izquierda .sidebar .menu-option:hover {
+      background: var(--color-light);
+}
+
+.contenedor-izquierda .sidebar i {
+      font-size: 1.4rem;
+      color: var(--color-grey);
+      margin-left: 2rem;
+      position: relative;
+}
+
+.contenedor-izquierda .sidebar h3 {
+      margin-left: 1.2rem;
+      font-size: 18px;
+}
+.contenedor-izquierda .sidebar i{
+      font-size: 25px;
+}
+
+.contenedor-izquierda .sidebar .active {
+      background: var(--color-light);
+}
+
+.contenedor-izquierda .sidebar .active i,
+.contenedor-izquierda .sidebar .active h3 {
+      color: var(--color-purple);
+}
+
+.contenedor-izquierda .sidebar .active::before {
+      content: "";
+      display: block;
+      width: 0.5rem;
+      height: 100%;
+      position: absolute;
+      background: var(--color-lila);
+}
+
+.contenedor-izquierda .sidebar .menu-option:first-child.active {
+      border-top-left-radius: var(--tarjet-border-radius);
+      overflow: hidden;
+}
+
+.contenedor-izquierda .sidebar .menu-option:last-child.active {
+      border-bottom-left-radius: var(--tarjet-border-radius);
+      overflow: hidden;
+}
+
+
+/*--------------------- NUEVA PUBLICACION ---------------------*/
+.contenedor-central .crear-post {
+      width: auto;
+      display: block;
+      text-align: center;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 10px;
+      background: var(--color-white);
+      padding: 0.7rem var(--tarjet-padding);
+      border-radius: var(--border-radius);
+      
+}
+.datos-user{
+      display: flex;
+      align-items: center;
+      justify-content:flex-start;
+      font-weight: 600;
+      text-transform: capitalize;
+}
+.contenedor-central .crear-post .photo-profile{
+      margin: 10px;
+}
+
+.shadow-drop-center:hover{
+      animation:shadow-drop-center 0.4s linear both
+} 
+@keyframes shadow-drop-center{
+      0%{
+            box-shadow:0 0 0 0 transparent;
+      }
+      100%{
+            box-shadow:0 0 20px 0 var(--color-grey);
+      }
+}
+.text-modal{
+      display: block;
+      font-size: 15px;
+      padding: 15px;
+      text-align: center;
+      max-width: auto;
+      min-width: 100%;
+      height: 60px;
+      outline: none;
+      margin-bottom: 10px;
+      border-radius: 20px;
+      border: var(--color-light) 0.5px solid;
+}
+textarea::placeholder{
+      color: var(--color-black);
+      font-size: 15px;
+      text-align: center;
+}
+/*-----------------PUBLICACION-------------*/
+
+.contenedor-central .publicacion {
+      background-color: #d4c3ec;
+      border: var(--color-purple) solid 1px;
+      border-radius: 20px;
+      padding: var(--card-padding);
+      margin: 16px;
+}
+.contenedor-central .publicacion img, .other img{
+      width: 40px;
+      border-radius: 50%;
+      margin: 10px;
+      display: flex;
+      text-align: start;
+}
+
+.contenedor-central .other {
+      background-color: var(--color-light);
+      border: var(--color-lila) solid 1px;
+      border-radius: 20px;
+      padding: var(--card-padding);
+      margin: 16px;
+}
+
+.textPublic{
+      background-color: var(--color-white);
+      padding: 20px;
+      margin: 20px;
+      border-radius: 20px;
+      font-size: 17px;
+      font-weight: 600;
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.userPublic{
+      background-color: rgba(255, 255, 255, 0.274);
+      text-transform: capitalize;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 15px;
+      margin: 20px;
+      border-radius: 20px;
+      font-size: 15px;
+      color: #333333;
+}
+
+
+/*---------------------DERECHA----------------------*/
+main .contenedor-derecha {
+      display: flex;
+      gap: 6px;
+}
+
+main .userName-cotenedor {
+      background: var(--color-white);
+      border-radius: var(--tarjet-border-radius);
+      padding: var(--tarjet-padding);
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+}
+
+main .contenedor-derecha .userName-cotenedor img {
+      border-radius: 50%;
+      padding: 7px;
+      object-fit: cover;
+}
+
+.userName-data {
+      text-align: center;
+      line-height: 20px;
+      padding: 4px;
+}
+
+/* . . . . . . . . .  . . . . . . PERSONALIZACION - TEMAS . . . . . . . . .  . . . . . . */
+.color-fondo{
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  position: fixed;
+  z-index: 100;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.color-fondo .card-tema{
+  width: 50%;
+  background: var(--color-white);
+  border-radius: var(--tarjet-border-radius);
+  padding: 3rem;
+}
+.color-fondo .escoge-fondo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 30px;
+}
+.color-fondo .escoge-fondo > div{
+  padding: var(--tarjet-padding);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.color-fondo .escoge-fondo > div.active{
+  border: 2px solid var(--color-purple);
+}
+.color-fondo .escoge-fondo .tema-1{
+  background: var(--color-white);
+  color: var(--color-black);
+}
+.color-fondo .escoge-fondo .tema-2{
+  background: var(--color-dark);
+  color: var(--color-white);
+}
+.color-fondo .escoge-fondo .tema-3{
+  background: var(--color-black);
+  color: var(--color-white);
+}
+.color-fondo .escoge-fondo > div span{
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid var(--color-grey);
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1200px) {
+      .container {
+            width: 96%;
+      }
+
+      main .container {
+            grid-template-columns: 5rem auto 30vw;
+            gap: 1rem;
+      }
+
+      .contenedor-izquierda {
+            width: 5rem;
+            z-index: 5;
+      }
+
+      .sidebar h3 {
+            display: none;
+      }
+      .modal-public{
+            display: none;
+      }
+      .color-fondo .card-tema{
+        width: 80%;
+      }
+}
+
+@media screen and (max-width: 992px) {
+      main .container {
+            grid-template-columns: 0 auto 5rem;
+            gap: 0;
+      }
+
+      main .container .contenedor-izquierda {
+            grid-column: 3/4;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            top: 7rem;
+      }
+      .logo{
+            font-size: 20px;
+      }
+
+      main .container .contenedor-central {
+            grid-column: 1/3;
+      }
+
+      main .container .contenedor-derecha {
+            display: none;
+      }
+    
+
+}
+@media screen and (max-width: 600px){
+      nav{
+            width: 100%;
+      }
+      .photo-profile, .datos-user{
+            display: none;
+      }
+      .contenedor-central .crear-post{
+            height: 200px;
+            display: block;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+      }
+      .text-modal{
+            display: flex;
+            font-size: 15px;
+            padding: 15px;
+            text-align: center;
+            max-width: auto;
+            min-width: 100%;
+            height: 70%;
+            outline: none;
+            margin-bottom: 10px;
+            border-radius: 20px;
+            border: var(--color-light) 0.5px solid;
+      }
+      textarea::placeholder{
+            color: var(--color-black);
+            font-size: 15px;
+            text-align: center;
+      }
+      .color-fondo .escoge-fondo{
+            display: block;
+            
+      }
+      .color-fondo .escoge-fondo > div{
+            margin: 10px;
+      }
+}
+@media screen and (max-width: 300px){
+  .contenedor-central{
+    margin: 10px;
+  }
+  .color-fondo .card-tema{
+    width: 80%;
+  }
+
+  
+}
