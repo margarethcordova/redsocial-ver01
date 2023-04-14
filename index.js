@@ -40,7 +40,7 @@ $(document).ready(function () {
                 var user = userCredential.user;
                 // ...
                 console.log("Ya estas registrado");
-                window.location.href = "principal.html";
+                window.location.href = "html/principal.html";
                 addUserName(registerUserName);
             })
             .catch((error) => {
@@ -69,8 +69,8 @@ $(document).ready(function () {
                 // Signed in
                 var user = userCredential.user;
                 // ...
-                console.log("ojala se caiga de su cama");
-                window.location.href = "principal.html";
+                console.log("ups! error");
+                window.location.href = "html/principal.html";
             })
             .catch((error) => {
                 var errorCode = error.code;
@@ -93,7 +93,7 @@ $(document).ready(function () {
         firebase.auth()
             .signInWithPopup(provider)
             .then((result) => {
-                window.location.href = "principal.html";
+                window.location.href = "html/principal.html";
 
             }).catch((error) => {
                 // Handle Errors here.
@@ -262,18 +262,6 @@ $(document).ready(function () {
                                   </div>
                                   <div class="userPublic" id="userPublicResult">
                                       <img id="photoUser" src="${publicacion.photoUser}">
-                                      <p>Publicado por ${publicacion.nameUser}</p>
-                                  </div>
-                          </div>
-                      `
-                } else if (photoUser == null) {
-                    div = `
-                          <div class="publicacion shadow-drop-center">
-                                  <div class="textPublic" id="textPublicResult">
-                                          <p>${publicacion.userPublicacion}</p>
-                                  </div>
-                                  <div class="userPublic" id="userPublicResult">
-                                      <img id="photoUser" src="img/perfil-img.jpg">
                                       <p>Publicado por ${publicacion.nameUser}</p>
                                   </div>
                           </div>
