@@ -537,7 +537,19 @@ main .contenedor-derecha .userName-cotenedor img {
     margin-right: 1rem;
 }
 
-
+/*---------------FOOTER--------------*/
+footer{
+    background-color: var(--color-lila);
+    color: var(--color-white);
+    bottom: 0;
+    position: sticky;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    font-size: 15px;
+}
 
 /* MEDIA QUERIES */
 
