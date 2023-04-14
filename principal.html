@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
       <meta charset="UTF-8">
@@ -19,19 +19,29 @@
             <div class="container">
                   <h2 class="logo">hello, <span id="userNameResult1"></span></h2>
                   <div class="public">
-                        <div class="bton-help">
+                        <!-- <div id="openReportModal" class="bton-help">
                               <div class="border-help">
-                                    <a class="help">
+                                    <a class="help" href="#modal-help">
                                           <i class="uil uil-exclamation-triangle"></i>
                                     </a>
                               </div>
-                        </div>
-                              <div class="photo-profile">
+                        </div> -->
+                        <div class="photo-profile">
                               <img class="userPhoto" src="https://i.ibb.co/1XbC1PZ/perfil-img.png" alt="images-profile">
                         </div>
                   </div>
             </div>
       </nav>
+      <!-- <section class="modal-help" id="modal-help">
+            <div class="modal-container">
+                  <p class="text-second">Notastes algún mal comportamiento? Aca estamos para solucionarlo!.</p>
+                  <h2 class="texto-primary">
+                        Reportar Usuario
+                  </h2>
+                  <input type="text" class="report-user" id="report-user">
+                  <button type="submit" class="btn-report">Reportar</button>
+            </div>
+      </section> -->
       <!-- . . . . . DASHBOARD / PRINCIPAL . . . . . . -->
       <main>
             <div class="container">
@@ -43,10 +53,10 @@
                                     <span><i class="uil uil-estate"></i></span>
                                     <h3>Inicio</h3>
                               </a>
-                              <a class="menu-option" id="temaBg">
+                              <!-- <a class="menu-option" id="temaBg">
                                     <span><i class="uil uil-palette"></i></span>
                                     <h3>Temas</h3>
-                              </a>
+                              </a> -->
                               <a class="menu-option" id="btnClose">
                                     <span><i class="uil uil-signout"></i></span>
                                     <h3>Cerrar Sesión</h3>
@@ -59,13 +69,15 @@
                         <!--------- NUEVA PUBLICACION ---------->
                         <form class="crear-post shadow-drop-center">
                               <div class="datos-user">
-                                    <div class="photo-profile">    
-                                          <img id="photoUser" class="userPhoto" src="https://i.ibb.co/1XbC1PZ/perfil-img.png" alt="user-profile"> 
-                                    </div> 
+                                    <div class="photo-profile">
+                                          <img id="photoUser" class="userPhoto"
+                                                src="https://i.ibb.co/1XbC1PZ/perfil-img.png" alt="user-profile">
+                                    </div>
                                     <span class="userName-Result"></span>
                               </div>
-                              
-                              <textarea class="text-modal" id="crearPost" placeholder="¿Qué tienes en mente ahora?"></textarea>
+
+                              <textarea class="text-modal" id="crearPost"
+                                    placeholder="¿Qué tienes en mente ahora?"></textarea>
                               <!-- <input type="text" placeholder="¿Que idea quieres compartir ahora?" id="crearPost" > -->
                               <input type="submit" value="Publicar" class="bton bton-initial" id="btnPublic">
                         </form>
@@ -79,7 +91,8 @@
                         <div class="contenedor-Usernames">
                               <div class="userName-cotenedor">
                                     <div class="userName-data">
-                                          <img id="photoUser" class="userPhoto" src="https://i.ibb.co/1XbC1PZ/perfil-img.png">
+                                          <img id="photoUser" class="userPhoto"
+                                                src="https://i.ibb.co/1XbC1PZ/perfil-img.png">
                                           <br>
                                           <div class="data-username">
                                                 <h4><span class="userName-Result texto-primary"></span></h4>
@@ -93,139 +106,77 @@
       </main>
       <!--. . . . . . . . . . . . . . . . . . .TEMAS . . . . . . . . . . . . . . . . . . .-->
       <div class="color-fondo">
-        <div class="card-tema">
-            <h4>Elige el tema</h4>
-            <div class="escoge-fondo">
-                  <div class="tema-1 active">
-                        <span></span>
-                        <h5 for="tema-1">Día</h5>
+            <div class="card-tema">
+                  <h4>Elige el tema</h4>
+                  <div class="escoge-fondo">
+                        <div class="tema-1 active">
+                              <span></span>
+                              <h5 for="tema-1">Día</h5>
+                        </div>
+                        <div class="tema-3">
+                              <span></span>
+                              <h5 for="tema-3">Noche</h5>
+                        </div>
                   </div>
-                  <div class="tema-2">
-                        <span></span>
-                        <h5 for="tema-2">Oscuro</h5>
-                  </div>
-                  <div class="tema-3">
-                        <span></span>
-                        <h5 for="tema-3">Noche</h5>
-                  </div>
-            </div>
-        <div>
+            <div>
       </div>
 
-      <!-- CDN DE FIREBASE -->
-      <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-      
-      <!-- J-query CDN -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+                  <!-- CDN DE FIREBASE -->
+                  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
 
-      <!-- CDN DE FIREBASE AUTH -->
-      <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+                  <!-- J-query CDN -->
+                  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
-      <!-- FIRESTORE -->
-      <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+                  <!-- CDN DE FIREBASE AUTH -->
+                  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
 
-      <!-- NUESTRO CODIGO JAVASCRIPT-->
-      
-      <script src="../js/index.js"></script>
+                  <!-- FIRESTORE -->
+                  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
 
-      <!-- CDN SWEETALERT -->
-  
-      <script>
-            const menuOption = document.querySelectorAll('.menu-option');
-            //quitar 
-            const cambiarActivadoOption = () => {
-                menuOption.forEach(item => {
-                        item.classList.remove('active');
-                });
-            };
+                  <!-- NUESTRO CODIGO JAVASCRIPT-->
 
-            menuOption.forEach(item => {
-                  item.addEventListener('click', () => {
-                    cambiarActivadoOption();
-                        item.classList.add('active');
-                  });
-            });
-      </script>
-  
-      <script>
-        const tema = document.querySelector('#temaBg');
-        const temaModal = document.querySelector('.color-fondo');
-        //open ModalPopUpTema
-        const openModalTema = () => {
-          temaModal.style.display = 'grid';
-        };
+                  <script src="../js/index.js"></script>
 
-        //close ModalPopUpTema
-        const closeModalTema = (e) => {
-          if(e.target.classList.contains('color-fondo')){
-            temaModal.style.display = 'none';
-          }
-        };
+                  <!-- CDN SWEETALERT -->
 
-      
-        temaModal.addEventListener('click', closeModalTema);
-        
-        tema.addEventListener('click', openModalTema);
-        
-  
-        const fondo1 = document.getElementById('.tema-1');
-        const fondo2 = document.getElementById('.tema-2');
-        const fondo3 = document.getElementById('.tema-3');
+                  <script>
+                        const menuOption = document.querySelectorAll('.menu-option');
+                        //quitar 
+                        const cambiarActivadoOption = () => {
+                              menuOption.forEach(item => {
+                                    item.classList.remove('active');
+                              });
+                        };
 
-        //temas
-        let lightColor;
-        let darkColor;
-        let whiteColor;
-        //cambiar tema
-        const cambiarFondo = () => {
-          root.style.setProperty('--color-background-dark', darkColor);
-          root.style.setProperty('--color-background-light', lightColor);
-          root.style.setProperty('--color-background-white', whiteColor);
-        };
+                        menuOption.forEach(item => {
+                              item.addEventListener('click', () => {
+                                    cambiarActivadoOption();
+                                    item.classList.add('active');
+                              });
+                        });
+                  </script>
 
-        fondo1.addEventListener('click', (e) =>{
-          //activado
-          fondo1.classList.add('active');
-          //desactivado
-          fondo2.classList.remove('active');
-          fondo3.classList.remove('active');
+                  <script>
+                        const tema = document.querySelector('#temaBg');
+                        const temaModal = document.querySelector('.color-fondo');
+                        //open ModalPopUpTema
+                        const openModalTema = () => {
+                              temaModal.style.display = 'grid';
+                        };
 
-          window.location.reload();
-          
-        });
-        
-        fondo2.addEventListener('click', () =>{
-          darkColor = '95%';
-          lightColor = '15%';
-          whiteColor = '20%';
+                        //close ModalPopUpTema
+                        const closeModalTema = (e) => {
+                              if (e.target.classList.contains('color-fondo')) {
+                                    temaModal.style.display = 'none';
+                              }
+                        };
 
-          //activado
-          fondo2.classList.add('active');
-          //desactivado
-          fondo1.classList.remove('active');
-          fondo3.classList.remove('active');
 
-          cambiarFondo();
-          
-        });
+                        temaModal.addEventListener('click', closeModalTema);
 
-        
-        fondo3.addEventListener('click', () =>{
-          darkColor = '95%';
-          lightColor = '0%';
-          whiteColor = '10%';
+                        tema.addEventListener('click', openModalTema);
 
-          //activado
-          fondo3.classList.add('active');
-          //desactivado
-          fondo1.classList.remove('active');
-          fondo2.classList.remove('active');
-
-          cambiarFondo();
-          
-        });
-        
-      </script>
+                  </script>
 </body>
 
 </html>

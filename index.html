@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -100,34 +100,6 @@
         </div>
     </div>
 
-    <script>
-        const btnSignUp = document.querySelector("#btnSignUp");
-        const btnSignIn = document.querySelector("#btnSignIn");
-        const container = document.querySelector(".container");
-        const signInBtn2 = document.querySelector("#signIn-btn2");
-        const signUpBtn2 = document.querySelector("#signUp-btn2");
-
-        btnSignUp.addEventListener("click", () => {
-            container.classList.add("signUpModal");
-        });
-
-        btnSignIn.addEventListener("click", () => {
-            container.classList.remove("signUpModal");
-        });
-
-        // RESPONSIVE - LOGIN V.CELL
-
-        signUpBtn2.addEventListener("click", () => {
-            container.classList.add("signUpModal2");
-        });
-
-        signInBtn2.addEventListener("click", () => {
-            container.classList.remove("signUpModal2");
-        });
-
-    </script>
-
-
     <!-- CDN DE FIREBASE -->
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
 
@@ -139,6 +111,7 @@
 
     <!-- NUESTRO CODIGO JAVASCRIPT-->
     <script src="js/index.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 
