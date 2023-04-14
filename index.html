@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello!</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="slide navbar style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="signin-signup">
+            <form action="" class="signin-form">
+                <h2 class="title">Iniciar Sesión</h2>
+                <div class="input-data">
+                    <i class="uil uil-user-circle"></i>
+                    <input type="email" id="emailSignIn" placeholder="hello@hello.com!">
+                </div>
+                <div class="input-data">
+                    <i class="uil uil-key-skeleton-alt"></i>
+                    <input type="password" id="passwordSignIn" placeholder="contraseña secreta">
+                </div>
+                <button type="submit" class="bton" value="Login" id="btonSignIn">Iniciar Sesión</button>
+                <p class="text-options">Tambien puedes iniciar sesión con</p>
+                <div class="icon-social-options">
+                    <a class="icon-social" id="iniciarGoogle">
+                        <img src="https://i.ibb.co/RCpWK4k/google.png" alt="" class="img-icon">
+                    </a>
+                    <a class="icon-social">
+                        <img src="https://i.ibb.co/CWmyhf3/github.png" alt="" class="img-icon">
+                    </a>
+                    <a class="icon-social">
+                        <img src="https://i.ibb.co/dmYTqKn/facebook.png" alt="" class="img-icon">
+                    </a>
+                </div>
+                <br>
+                <p class="text-cuenta">No tienes una cuenta? <a href="#" id="signUp-btn2">REGISTRATE</a></p>
+            </form>
+
+            <form action="" class="signup-form">
+                <h2 class="title">Registrarse</h2>
+                <div class="input-data">
+                    <i class="uil uil-at"></i>
+                    <input type="text" id="registerUserName" placeholder="identificacion">
+                </div>
+                <div class="input-data">
+                    <i class="uil uil-user-circle"></i>
+                    <input type="email" id="registerEmail" placeholder="hello@hello.com!">
+                </div>
+                <div class="input-data">
+                    <i class="uil uil-key-skeleton-alt"></i>
+                    <input type="password" id="registerPassword" placeholder="contraseña secreta">
+                </div>
+                <button type="submit" class="bton" id="btonRegistrarse" value="Login">Registrarse</button>
+                <p class="text-options">Tambien puedes registrarte con</p>
+                <div class="icon-social-options">
+                    <a class="icon-social" id="registerGoogle">
+                        <img src="https://i.ibb.co/RCpWK4k/google.png" alt="" class="img-icon">
+                    </a>
+                    <a href="" class="icon-social">
+                        <img src="https://i.ibb.co/CWmyhf3/github.png" alt="" class="img-icon">
+                    </a>
+                    <a href="" class="icon-social">
+                        <img src="https://i.ibb.co/dmYTqKn/facebook.png" alt="" class="img-icon">
+                    </a>
+                </div>
+                <br>
+                <p class="text-cuenta">Ya tienes una cuenta registrada? <a href="#" id="signIn-btn2">INICIAR SESIÓN</a>
+                </p>
+            </form>
+        </div>
+
+
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="contenido">
+                    <h3>Bienvenido, hellowi!</h3>
+                    <img class="gifi" src="https://i.ibb.co/Tq6tCjN/laptop.gif" alt="">
+                    <h4>Ya tienes una cuenta?</h4>
+                    <p>Dale clic al botón de "Iniciar Sesión" y a seguir conociendo más personas!</p>
+                    <button class="bton panel-btn" id="btnSignIn">Iniciar Sesión</button>
+                </div>
+            </div>
+            <div class="panel right-panel">
+                <div class="contenido">
+                    <h3>Hola, otra vez!</h3>
+                    <img class="gifi" src="https://i.ibb.co/Tq6tCjN/laptop.gif" alt="">
+                    <h4>Aun no formas parte de hellO?</h4>
+                    <p>Dale clic al boton de "Registrarse" y comienza a conocer de verdad a nuevas personas!</p>
+                    <button class="bton panel-btn" id="btnSignUp">Registrarse</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const btnSignUp = document.querySelector("#btnSignUp");
+        const btnSignIn = document.querySelector("#btnSignIn");
+        const container = document.querySelector(".container");
+        const signInBtn2 = document.querySelector("#signIn-btn2");
+        const signUpBtn2 = document.querySelector("#signUp-btn2");
+
+        btnSignUp.addEventListener("click", () => {
+            container.classList.add("signUpModal");
+        });
+
+        btnSignIn.addEventListener("click", () => {
+            container.classList.remove("signUpModal");
+        });
+
+        // RESPONSIVE - LOGIN V.CELL
+
+        signUpBtn2.addEventListener("click", () => {
+            container.classList.add("signUpModal2");
+        });
+
+        signInBtn2.addEventListener("click", () => {
+            container.classList.remove("signUpModal2");
+        });
+
+    </script>
+
+
+    <!-- CDN DE FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+    <!-- J-query CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <!-- CDN DE FIREBASE AUTH -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+
+    <!-- NUESTRO CODIGO JAVASCRIPT-->
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
