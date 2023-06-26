@@ -40,7 +40,7 @@ $(document).ready(function () {
                 var user = userCredential.user;
                 // ...
                 console.log("Ya estas registrado");
-                window.location.href = "html/principal.html";
+                window.location.href = "principal.html";
                 addUserName(registerUserName);
             })
             .catch((error) => {
@@ -70,7 +70,7 @@ $(document).ready(function () {
                 var user = userCredential.user;
                 // ...
                 console.log("ups! error");
-                window.location.href = "html/principal.html";
+                window.location.href = "principal.html";
             })
             .catch((error) => {
                 var errorCode = error.code;
